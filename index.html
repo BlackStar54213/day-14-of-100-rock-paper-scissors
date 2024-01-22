@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(./ivana-cajina-asuyh-_ZX54-unsplash.jpg);
+            background-size: contain;
+            background-position: center;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            height: 100vh;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            gap: 5vw;
+            align-items: center;
+        }
+
+        section div {
+            height: 20vw;
+            width: 20vw;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            font-family: public sans;
+            user-select: none;
+            color: blueviolet;
+            flex-direction: column;
+            font-weight: 600;
+
+        }
+
+        .scores {
+            display: flex;
+            gap: 30px;
+            background-color: blueviolet;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 80px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .you,
+        .Comp {
+            display: flex;
+            gap: 20px;
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+
+        a {
+            font-size: 30px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid white;
+            color: white;
+            background-color: blueviolet;
+            width: 100px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scores">
+        <h3 id="yourScore">You: 0</h3>
+        <h3 id="comScore">Com: 0</h3>
+    </div>
+    <h1>CHOOSE AN OPTION</h1>
+    <main>
+        <section class="main">
+            <div class="rock" onclick="chooseFunc(1)"><img src="./fist.png" alt=""> Rock
+            </div>
+            <div class="paper" onclick="chooseFunc(2)"> <img src="./hand-paper.png" alt="">Paper</div>
+            <div class="scissor" onclick="chooseFunc(3)"> <img src="./scissors.png" alt="">Scissors</div>
+        </section>
+        <div class="choices">
+            <div class="you">
+                <h2>You: </h2>
+                <div id="playerChoice"></div>
+            </div>
+
+            <div class="Comp">
+                <h2>Com: </h2>
+                <div id="comChoice"></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
